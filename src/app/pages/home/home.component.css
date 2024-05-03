@@ -1,0 +1,67 @@
+/* Estilos básicos */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1e1e1e;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.titulo h2, .subtitulo h4, h3 {
+  text-align: center;
+  color: #3fdecf; /* Un color cian brillante para dar un toque moderno y atractivo */
+}
+
+.titulo h2 {
+  font-size: 2.8rem;
+  margin-top: 20px;
+}
+
+.subtitulo h4 {
+  font-size: 1.6rem;
+  color: #ffcd38; /* Un tono dorado para destacar la bienvenida */
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #aaa;
+}
+
+.lista-juegos {
+  background: #242424;
+  padding: 20px;
+}
+
+.tipo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.tipo img {
+  width: 120px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #444;
+  margin: 20px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tipo {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .tipo img {
+      margin-bottom: 10px;
+  }
+}

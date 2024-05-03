@@ -1,0 +1,64 @@
+<br>
+<h6>Filtrar por precio:</h6>
+<div style="flex: 1; flex-direction: row;">
+    <label style="margin-right: 5px;">Precio Minimo:</label>
+    <input type="number"  name="valorMinimo" [(ngModel)]="PrecioMinimo">
+    <span style="margin-inline: 10px;"></span>
+    <label style="margin-right: 5px;">Precio Maximo:</label>
+    <input type="number"  name="valorMaximo" [(ngModel)]="PrecioMaximo">
+    <span style="margin-inline: 40px;"></span>
+    <label style="margin-right: 5px;">Buscar id:</label>
+    <input type="text"  name="valorMaximo" [(ngModel)]="inputId">
+    <button (click)="buscarId()">Buscar</button>
+</div><br>
+    
+
+<h6>Filtrar por categoria:</h6>
+<select name="" id="" [(ngModel)] ='filtro'>
+  <option value="seleccione" >seleccione</option>
+  <option value="aventura">aventura</option>
+  <option value="accion">accion</option>
+  <option value="simulacion">simulacion</option>
+  <option value="lucha">rpg</option>
+  <option value="drama">drama</option>
+</select>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Categoria</th>
+      <th scope="col">Spoiler</th>
+      <th scope="col">Detalles</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (item of videojuegos; track item) {
+    <tr>
+      @if( (item.precio < PrecioMaximo && item.precio > PrecioMinimo) || item.categoria==filtro || item.id==realId){
+      <th scope="row">{{item.id}}</th>
+      <td>{{item.nombre}}</td>
+      <td>{{item.precio}} $</td>
+      <td>{{item.categoria}}</td>
+      <td>
+        <!--///////////////////////////////-->
+        @if( visualizar == item.id ){
+        <button class="btn btn-warning" (click)="ver('hola')" >Spoiler</button>
+        <img src="{{item.url}}" alt="" height="200">
+        } @else {
+          <button class="btn btn-primary" (click)="ver( item.id )">Spoiler</button>
+        }
+        <!--//////////////////////////////////-->
+      </td>
+      <td>
+        <button [routerLink]="['/videojuegos-detalles', item.id]">Detalles</button>
+      </td>
+      }
+      
+    </tr>
+    }
+  </tbody>
+</table>
+

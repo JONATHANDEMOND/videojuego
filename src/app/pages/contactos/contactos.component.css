@@ -1,0 +1,48 @@
+.contactos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 0;
+  background: url(../../../assets/images/56.jpg) no-repeat center center;
+  background-size: cover;
+  color: #FFFFFF;
+}
+
+.contacto-info {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.7); /* Añade transparencia para textos más legibles */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); /* Efecto de glow para el tema de videojuegos */
+  font-family: 'Press Start 2P', cursive; /* Fuente estilo retro */
+}
+
+.contacto-info h2 {
+  margin-bottom: 20px;
+  font-size: 1.5em; /* Aumenta el tamaño para más impacto visual */
+}
+
+.contacto-info p {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.contacto-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contacto-info ul li {
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+.contacto-info ul li a {
+  color: #4CAF50; /* Color verde brillante para links */
+  text-decoration: none; /* No underline */
+}
+
+.contacto-info ul li a:hover {
+  text-decoration: underline; /* Underline on hover */
+}

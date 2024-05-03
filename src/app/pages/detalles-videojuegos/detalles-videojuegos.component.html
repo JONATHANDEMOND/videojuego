@@ -1,0 +1,13 @@
+
+<div class="container">
+    <div class="card mx-auto" style="width:300px">
+        <img class="card-img-top" src="{{juego.url}}" alt="Card image" style="width:100%">
+        <div class="card-body">
+            <h4 class="card-title">{{juego.nombre}}</h4>
+            <p class="card-text">{{juego.precio}} $</p>
+            <p class="card-text">{{juego.categoria}}</p>
+            <button class="btn btn-primary" (click)="mensaje()">Ver</button>
+            <button   class="btn btn-danger" [routerLink]="['/videojuegos']">Regresar</button>
+        </div>
+    </div>
+</div>

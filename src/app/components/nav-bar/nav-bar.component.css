@@ -1,0 +1,42 @@
+/* Estilos básicos para navbar */
+.navbar {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+.navbar-brand {
+    color: #ffffff;
+}
+
+.nav-link {
+    color: #ffffff;
+}
+
+.navbar-toggler {
+    background: none;
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.dropdown-menu {
+    background-color: #343a40;
+}
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background-color: #212529; /* Fondos oscuros para móviles cuando se expande el menú */
+    }
+
+    .navbar-nav {
+        margin-top: 12px;
+    }
+}
+
+@media (min-width: 769px) {
+    .navbar-expand-lg .navbar-collapse {
+        justify-content: flex-end; /* Alinea los elementos del menú hacia la derecha en pantallas grandes */
+    }
+}
